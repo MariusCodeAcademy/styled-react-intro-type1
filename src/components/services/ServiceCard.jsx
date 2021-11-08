@@ -42,18 +42,18 @@ const ServiceLink = styled.a`
   text-decoration: none;
 `;
 
-function ServiceCard() {
+function ServiceCard({ title, id, url, body, icon }) {
   return (
     <CardStyled>
       <IconStyled>
-        <i class='fa fa-id-badge' aria-hidden='true'></i>
+        <i class={`fa fa-${icon}`} aria-hidden='true'></i>
       </IconStyled>
-      <ServiceTitle>UI &amp; UX Design</ServiceTitle>
+      <ServiceTitle>{title}</ServiceTitle>
       <ServiceText>
         Far far away, behind the word mountains, far from the countries Vokalia
         and Consonantia, there live the blind texts.
       </ServiceText>
-      <ServiceLink href='/'>
+      <ServiceLink href={`${url}/${id}`}>
         Read more <i class='fa fa-long-arrow-right' aria-hidden='true'></i>
       </ServiceLink>
     </CardStyled>

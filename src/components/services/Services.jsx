@@ -1,5 +1,30 @@
 import styled from 'styled-components';
 import ServiceCard from './ServiceCard';
+import { useState } from 'react';
+
+const servicesInitArr = [
+  {
+    id: 1,
+    icon: 'address-card',
+    title: 'UI & UX Design',
+    body: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+    url: '/cards',
+  },
+  {
+    id: 2,
+    icon: 'window-restore',
+    title: 'Web Development',
+    body: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+    url: '/cards',
+  },
+  {
+    id: 3,
+    icon: 'user-circle',
+    title: 'Graphic Design',
+    body: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+    url: '/cards',
+  },
+];
 
 const Section = styled.section`
   max-width: 800px;
@@ -32,6 +57,7 @@ const CardContainer = styled.div`
 // pavadinimus ir nuorodas '/cards/<korteles id>'
 
 function Services() {
+  const [cardArr, setCardArr] = useState(servicesInitArr);
   return (
     <Section>
       <TitleTop>Services</TitleTop>
@@ -39,9 +65,9 @@ function Services() {
         This is My Expertise, The Services I'll Provide My Clients
       </MainTitle>
       <CardContainer>
-        <ServiceCard />
-        <ServiceCard />
-        <ServiceCard />
+        {cardArr.map((cardObj) => (
+          <ServiceCard key={cardObj.id} {...cardObj} />
+        ))}
       </CardContainer>
     </Section>
   );

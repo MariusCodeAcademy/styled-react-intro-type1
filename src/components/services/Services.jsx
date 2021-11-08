@@ -11,7 +11,7 @@ const Section = styled.section`
 
 const TitleTop = styled.h4`
   text-transform: uppercase;
-  color: #271de8;
+  color: #0779e4;
   margin: 0;
   font-size: 0.8rem;
   margin-bottom: 1rem;

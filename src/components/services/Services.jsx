@@ -20,7 +20,12 @@ const TitleTop = styled.h4`
 const MainTitle = styled.h2`
   font-size: 2.5rem;
   max-width: 650px;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
+`;
+
+const CardContainer = styled.div`
+  display: flex;
+  gap: 1rem;
 `;
 
 function Services() {
@@ -30,9 +35,11 @@ function Services() {
       <MainTitle>
         This is My Expertise, The Services I'll Provide My Clients
       </MainTitle>
-      <div className='card-container'>
+      <CardContainer>
         <ServiceCard />
-      </div>
+        <ServiceCard />
+        <ServiceCard />
+      </CardContainer>
     </Section>
   );
 }

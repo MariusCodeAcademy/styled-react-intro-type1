@@ -28,6 +28,9 @@ const CardContainer = styled.div`
   gap: 1rem;
 `;
 
+// sukurima duomenu masyva is kurio sugeneruojam korteles, iconeles,
+// pavadinimus ir nuorodas '/cards/<korteles id>'
+
 function Services() {
   return (
     <Section>

@@ -46,7 +46,7 @@ function ServiceCard({ title, id, url, body, icon }) {
   return (
     <CardStyled>
       <IconStyled>
-        <i class={`fa fa-${icon}`} aria-hidden='true'></i>
+        <i className={`fa fa-${icon}`} aria-hidden='true'></i>
       </IconStyled>
       <ServiceTitle>{title}</ServiceTitle>
       <ServiceText>
@@ -54,7 +54,7 @@ function ServiceCard({ title, id, url, body, icon }) {
         and Consonantia, there live the blind texts.
       </ServiceText>
       <ServiceLink href={`${url}/${id}`}>
-        Read more <i class='fa fa-long-arrow-right' aria-hidden='true'></i>
+        Read more <i className='fa fa-long-arrow-right' aria-hidden='true'></i>
       </ServiceLink>
     </CardStyled>
   );

@@ -6,6 +6,7 @@ const MyButton = styled.button`
 `;
 
 function Button(props) {
+  // logic
   return <MyButton>{props.children}</MyButton>;
 }
 
